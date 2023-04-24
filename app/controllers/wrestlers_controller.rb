@@ -1,13 +1,33 @@
 class WrestlersController < ApplicationController
   def index
+    @wrestlers = Wrestler.all
   end
 
   def show
+    @wrestler = Wrestler.find params[:id]
+  end
+
+  def create
+    wrestler = Wrestler.create wrestler_params
+    redirect_to wrestler
   end
 
   def edit
+    @wrestler = Wrestler.find params[:id]
   end
 
   def new
+    @wrestler = Wrestler.new
   end
+
+  def destroy
+    wrestler = Wrestler.find params[:id]
+    wrestler.destroy
+    redirect_to wrestlers_path
+  end
+
+  def wrestler_params
+    params.require(:wrestler).permit(:name, :image, :country, :height, :weight, :exp, :rating)
+  end
+
 end

@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 2023_04_23_072753) do
 
   create_table "teams", force: :cascade do |t|
     t.text "name"
-    t.text "members"
     t.float "total_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

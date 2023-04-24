@@ -12,4 +12,64 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Londrina+Shadow&family=Rubik+Iso&family=Tilt+Prism&display=swap');
+
+
+body {
+    background-color: rgb(255, 243, 236);
+    line-height: 2em;
+    color:rgb(27, 27, 27);
+    text-align: center;
+    max-width: 1400px;
+    margin: 0;
+}
+
+h1 {
+    color: black;
+    font-family: 'Rubik Iso', cursive;
+    font-size: 4em;
+    margin: 1em 0;
+}
+
+a {
+    margin: 1em 1em;
+}
+
+.container {
+    background-color: azure;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.thumb {
+    height: 15em;
+    border-radius: 1em;
+    /* margin-top: 2em; */
+    border: 3px solid white;
+}
+
+.full {
+    max-width: 40em;
+    border-radius: 1em;
+    border: 3px solid white;
+}
+
+input {
+    margin: 0 auto 1em auto;
+}
+
+.logo {
+    height: 15em;
+    margin-top: 2em;
+}
+
+.logo_full {
+    max-height: 40em;
+}
+
+form {
+    text-align: center;
+}

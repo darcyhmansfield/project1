@@ -12,6 +12,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= link_to "All Wrestlers", wrestlers_path %>
+      <%= link_to "New Wrestler", new_wrestler_path %>
+      <%= yield %>
+    </div>
   </body>
 </html>
