@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'users/new'
   root :to => "wrestlers#index"
   resources :wrestlers
   resources :promotions

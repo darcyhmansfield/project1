@@ -28,7 +28,7 @@ w6 = Wrestler.create :name => "Rhea Ripley", :image => "rhea.jpg", :country => "
 w7 = Wrestler.create :name => "Rey Fenix", :image => "rey.jpg", :country => "Mexico", :height => 177, :weight => 75, :exp => 18, :rating => 9.12
 w8 = Wrestler.create :name => "John Cena", :image => "cena.jpg", :country => "USA", :height => 185, :weight => 114, :exp => 23, :rating => 7.45
 w9 = Wrestler.create :name => "Great Muta", :image => "muta.jpg", :country => "Japan", :height => 188, :weight => 110, :exp => 38, :rating => 9.33
-w10 = Wrestler.create :name => "Ke Monito", :image => "monito.jpg", :country => "Mexico", :height => 80, :weight => 45, :exp => 5, :rating => 9.35
+w10 = Wrestler.create :name => "Ke Monito", :image => "monito.JPG", :country => "Mexico", :height => 80, :weight => 45, :exp => 5, :rating => 9.35
 w11 = Wrestler.create :name => "The Rock", :image => "rock.jpg", :country => "USA", :height => 193, :weight => 120, :exp => 20, :rating => 9.39
 w12 = Wrestler.create :name => "Kenta Kobashi", :image => "kenta.jpg", :country => "Japan", :height => 186, :weight => 115, :exp => 25, :rating => 9.76
 w13 = Wrestler.create :name => "Mistico", :image => "mistico.jpg", :country => "Mexico", :height => 170, :weight => 79, :exp => 24, :rating => 7.66

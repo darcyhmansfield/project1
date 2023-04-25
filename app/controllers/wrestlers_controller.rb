@@ -16,6 +16,12 @@ class WrestlersController < ApplicationController
     @wrestler = Wrestler.find params[:id]
   end
 
+  def update
+    wrestler = Wrestler.find params[:id]
+    wrestler.update wrestler_params
+    redirect_to wrestler
+  end
+
   def new
     @wrestler = Wrestler.new
   end
