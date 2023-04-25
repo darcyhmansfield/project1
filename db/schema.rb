@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2023_04_23_072753) do
   enable_extension "plpgsql"
 
   create_table "promotions", force: :cascade do |t|
-    t.text "promotion"
+    t.text "abbrev"
     t.text "logo"
     t.text "name"
     t.text "country"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2023_04_23_072753) do
   create_table "teams", force: :cascade do |t|
     t.text "name"
     t.float "total_rating"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,6 +50,8 @@ ActiveRecord::Schema.define(version: 2023_04_23_072753) do
     t.integer "weight"
     t.integer "exp"
     t.float "rating"
+    t.integer "team_id"
+    t.integer "promotion_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

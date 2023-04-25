@@ -1,2 +1,5 @@
-<h1>Promotions#index</h1>
-<p>Find me in app/views/promotions/index.html.erb</p>
+<h1>All Promotions</h1>
+
+<% @promotions.each do |promotion| %>
+    <%= link_to image_tag(promotion.logo, :class => 'thumb'), promotion %>
+<% end %>

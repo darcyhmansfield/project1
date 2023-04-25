@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Project1</title>
+    <title>Wrestle</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,6 +15,8 @@
     <div class="container">
       <%= link_to "All Wrestlers", wrestlers_path %>
       <%= link_to "New Wrestler", new_wrestler_path %>
+      <%= link_to "All Promotions", promotions_path %>
+      <%= link_to "New Promotion", new_promotion_path %>
       <%= yield %>
     </div>
   </body>

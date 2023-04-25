@@ -3,6 +3,7 @@ class CreateTeams < ActiveRecord::Migration[5.2]
     create_table :teams do |t|
       t.text :name
       t.float :total_rating
+      t.integer :user_id
 
       t.timestamps
     end

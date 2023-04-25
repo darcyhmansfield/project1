@@ -1,2 +1,7 @@
-<h1>Promotions#show</h1>
-<p>Find me in app/views/promotions/show.html.erb</p>
+<h1><%= @promotion.abbrev %></h1>
+
+<%= image_tag @promotion.logo, :class => 'logo_full' %>
+<p>Name: <%= @promotion.name %></p>
+<p>Country: <%= @promotion.country %></p>
+<p>Year started: <%= @promotion.year %></p>
+<p><%= link_to image_tag("insta.png", :class => 'insta'), @promotion.instagram, target: :_blank %></p>

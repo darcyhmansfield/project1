@@ -26,6 +26,8 @@ class WrestlersController < ApplicationController
     redirect_to wrestlers_path
   end
 
+  private
+
   def wrestler_params
     params.require(:wrestler).permit(:name, :image, :country, :height, :weight, :exp, :rating)
   end
