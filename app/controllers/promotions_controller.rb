@@ -4,7 +4,8 @@ class PromotionsController < ApplicationController
   end
 
   def create
-    @promotion = Promotion.create
+    promotion = Promotion.create promotion_params
+    redirect_to promotion
   end
 
   def new
@@ -15,8 +16,20 @@ class PromotionsController < ApplicationController
     @promotion = Promotion.find params[:id]
   end
 
+  def update
+    promotion = Promotion.find params[:id]
+    promotion.update promotion_params
+    redirect_to promotion
+  end
+
   def show
     @promotion = Promotion.find params[:id]
+  end
+
+  def destroy
+    promotion = Promotion.find params[:id]
+    promotion.destroy
+    redirect_to promotions_path
   end
 
   private

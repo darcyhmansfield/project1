@@ -19,8 +19,11 @@
 
 body {
     background-image: url("crowd.jpg");
+    min-height: 100%;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     /* background-color: rgb(255, 243, 236); */
     line-height: 2em;
     color:rgb(27, 27, 27);
@@ -28,11 +31,17 @@ body {
     margin: 0 auto;
 }
 
+.navbar-brand {
+    font-family: 'Rubik Iso', cursive;
+    font-size: 4em;
+    text-align: center;
+}
+
 h1 {
     color: black;
     font-family: 'Rubik Iso', cursive;
     font-size: 4em;
-    margin: 1em 0;
+    margin-top: 2em;
 }
 
 a {
@@ -41,10 +50,12 @@ a {
 
 .container {
     background-color: rgba(240, 255, 255, 0.9);
-    background-position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
     max-width: 960px;
     margin: 0 auto;
+    padding: 2em 0;
     text-align: center;
 }
 
