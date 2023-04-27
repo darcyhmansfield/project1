@@ -37,6 +37,11 @@ body {
     text-align: center;
 }
 
+.navbar-logo {
+    width: 20vw;
+    min-width: 250px;
+}
+
 h1 {
     color: black;
     font-family: 'Rubik Iso', cursive;

@@ -9,6 +9,11 @@ class WrestlersController < ApplicationController
 
   def create
     wrestler = Wrestler.create wrestler_params
+    if params[:file].present?
+      req = Cloudinary::Uploader.upload(params[:file])
+      wrestler.image = req["public_id"]
+      wrestler.save
+    end
     redirect_to wrestler
   end
 

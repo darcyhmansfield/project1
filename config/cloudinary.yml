@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dm3oxulgh
+  api_key: '678817678815195'
+  api_secret: _oxDzPsOiubsluskA_b2DRdq-74
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: dm3oxulgh
+  api_key: '678817678815195'
+  api_secret: _oxDzPsOiubsluskA_b2DRdq-74
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: dm3oxulgh
+  api_key: '678817678815195'
+  api_secret: _oxDzPsOiubsluskA_b2DRdq-74
+  enhance_image_tag: true
+  static_file_support: false
