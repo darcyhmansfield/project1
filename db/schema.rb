@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_26_225904) do
+ActiveRecord::Schema.define(version: 2023_04_27_105605) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2023_04_26_225904) do
     t.text "country"
     t.integer "year"
     t.text "instagram"
+    t.integer "wrestler_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -30,14 +31,20 @@ ActiveRecord::Schema.define(version: 2023_04_26_225904) do
     t.text "name"
     t.float "total_rating"
     t.integer "user_id"
+    t.integer "wrestler_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
+  create_table "teams_wrestlers", id: false, force: :cascade do |t|
+    t.integer "team_id"
+    t.integer "wrestler_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.text "email"
-    t.text "password"
     t.boolean "admin", default: false
+    t.integer "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"

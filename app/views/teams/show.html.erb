@@ -1,0 +1,11 @@
+<h1>My Teams</h1>
+
+<% @teams.each do |team| %>
+    <% if @current_user.id == team.user_id %>
+        <h2><%= team.name %></h2>
+        <% team.wrestlers.each do |wrestler| %>
+            <%= link_to image_tag(wrestler.image, :class => 'thumb'), wrestler %>
+        <% end %>
+    <% end %>
+<% end %>
+

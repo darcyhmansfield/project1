@@ -13,9 +13,9 @@ u3 = User.create :email => 'bonnie@ga.com', :password => 'chicken', :admin => fa
 puts "#{ User.count } users"
 
 Team.destroy_all
-t1 = Team.create :name => "Jonesy's Phenomenal Fighters", :total_rating => nil
+t1 = Team.create :name => "Jonesy's Jiggly Jabronis", :total_rating => nil
 t2 = Team.create :name => "Davey's Dynastic Dopplers", :total_rating => nil
-t3 = Team.create :name => "Bonnie's Bootilicious Beauties", :total_rating => nil
+t3 = Team.create :name => "Bonnie's Bountiful Beauties", :total_rating => nil
 puts "#{ Team.count } teams"
 
 Wrestler.destroy_all

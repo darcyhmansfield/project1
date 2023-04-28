@@ -4,7 +4,7 @@ class CreateTeams < ActiveRecord::Migration[5.2]
       t.text :name
       t.float :total_rating
       t.integer :user_id
-
+      t.integer :wrestler_id
       t.timestamps
     end
   end

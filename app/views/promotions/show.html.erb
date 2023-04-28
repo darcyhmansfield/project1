@@ -5,5 +5,11 @@
 <p>Country: <%= @promotion.country %></p>
 <p>Year started: <%= @promotion.year %></p>
 <p><%= link_to image_tag("insta.png", :class => 'insta'), @promotion.instagram, target: :_blank %></p>
+<div>
+    <h1>Wrestlers:<br></h1>
+    <% @promotion.wrestlers.each do |wrestler| %>
+        <%= link_to image_tag(wrestler.image, :class => 'thumb'), wrestler %>
+    <% end %>
+</div>
 <%= link_to "Edit Promotion", edit_promotion_path %>
 <%= link_to "Delete Promotion", promotion_path(@promotion), :method => :delete, :data => { :confirm => 'Are you sure?' } %>

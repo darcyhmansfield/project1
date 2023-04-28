@@ -40,7 +40,7 @@ class WrestlersController < ApplicationController
   private
 
   def wrestler_params
-    params.require(:wrestler).permit(:name, :image, :country, :height, :weight, :exp, :rating)
+    params.require(:wrestler).permit(:name, :image, :country, :height, :weight, :exp, :rating, :promotion_id)
   end
 
 end

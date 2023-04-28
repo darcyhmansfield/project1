@@ -1,2 +1,14 @@
-<h1>Teams#new</h1>
-<p>Find me in app/views/teams/new.html.erb</p>
+<h1>New Team</h1>
+<%= form_for @team do |f| %>
+    <fieldset>
+
+        <%= f.label :name %><br>
+        <%= f.text_field :name %><br>
+
+        <%= f.label "Choose wrestlers:" %>
+        <%= f.collection_check_boxes :wrestler_id, Wrestler.all, :id, :name %>
+
+        <%= f.submit %>
+
+    </fieldset>
+<% end %>

@@ -32,7 +32,10 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/wrestlers">All Wrestlers</a></li>
-                <li><a class="dropdown-item" href="/wrestlers/new">New Wrestler</a></li>
+                <% if @current_user.present? %>
+                  <li><a class="dropdown-item" href="/wrestlers/new">New Wrestler</a></li>
+                <% end %>
+                <%= link_to "Random Wrestler", wrestler_path(Wrestler.order("RANDOM()").first), :class => "dropdown-item" %>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -41,7 +44,6 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/promotions">All Promotions</a></li>
-                <li><a class="dropdown-item" href="/promotions/new">New Promotion</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -49,7 +51,7 @@
                 Teams
               </a>
               <ul class="dropdown-menu">
-                <a class="dropdown-item" href="/teams/index" class="nav-link">All Teams</a>
+                <a class="dropdown-item" href="/teams" class="nav-link">All Teams</a>
                 <% if @current_user.present? %>
                   <a class="dropdown-item" href="/teams/new" class="nav-link">New Team</a>
                   <a class="dropdown-item" href="/teams/show" class="nav-link">My Teams</a>
@@ -63,9 +65,9 @@
               <ul class="dropdown-menu">
                 <% if @current_user.present? %>
                   <% if @current_user.admin? %>
-                    <a class="dropdown-item" href="/users/index" class="nav-link">All Users</a>
+                    <a class="dropdown-item" href="/users" class="nav-link">All Users</a>
                   <% end %>
-                  <%= link_to "Log out #{ @current_user.email }", login_path, :method => :delete %>
+                  <%= link_to "Log out #{ @current_user.email }", login_path, :class => 'dropdown-item', :method => :delete %>
                 <% else %>
                   <a class="dropdown-item" href="/users/new" class="nav-link">Sign Up</a>
                   <a class="dropdown-item" href="/login" class="nav-link">Login</a>
